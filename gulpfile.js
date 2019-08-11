@@ -1,53 +1,45 @@
-const { gulp, src, dest, watch } = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
+'use strict';
+/**
+  * @gulpfile {for practice}
+  * browsersyncs on files changes and compiles scss to css (dist folder);
+  * use "gulp watch" command to start;
+  */
+
+const { gulp, src, dest, series, parallel, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
+const concat = require('gulp-concat');
 const sass = require('gulp-sass');
+const del = require('del');
 
-function def (cb) {
-  console.log ('hello gulp ready');
-  cb();
+function deleteDistFolder () {
+  return del('dist');
 }
 
-// function placePrefix () {
-//   return src('css/main.css')
-//           .pipe(autoprefixer({
-//             cascade: false
-//         }))
-//         .pipe(dest('dist/css'));
-// }
-
-function scssCompile () {
-  return src('app/scss/main.scss')
-          .pipe(sass().on('error', sass.logError))
-          .pipe(autoprefixer({
-            cascade: false
-          }))
-          .pipe(dest('dist/css'));
-}
-
-// function moveFiles () {
-//   return src(['css/main.css', 'css/reset.css', 'css/utils.css'])
-//           .pipe(dest('dist/css'));
-// }
-
-function syncBrowsers () {
+function startBrowserSync () {
   browserSync.init({
     server: {
-      baseDir: "./",
+      baseDir: './'
     },
-    notify: false
+    open: false,
+    notify: false,
+    port: 3000
   });
 }
 
-function watchFiles () {
-  syncBrowsers();
-  watch('index.html').on('change', browserSync.reload); // WATCH INDEX.html TO RELOAD browser
-  watch('dist/css/main.css').on('change', browserSync.reload); // WATCH CSS TO RELOAD BROWSER
-  watch('dist/js/main.js').on('change', browserSync.reload); // WATCH JS TO RELOAD BROWSER
-  watch('app/scss/main.scss').on('change', scssCompile); // WATCH SCSS FOR COMPILE
+function compileScss () {
+  return src('app/scss/index.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(concat('main.css'))
+    .pipe(dest('dist'));
 }
 
-exports.default = def;
-// exports.move = moveFiles;
-// exports.prefixes = placePrefix;
-exports.watch = watchFiles;
+function watchFiles () {
+  startBrowserSync();
+
+  watch('index.html').on('change', browserSync.reload);
+
+  watch('app/scss/**/*.scss').on('change', compileScss);
+  watch('dist/main.css').on('change', browserSync.reload);
+}
+
+exports.watch = series(deleteDistFolder, compileScss, watchFiles);
