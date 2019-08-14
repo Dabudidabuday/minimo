@@ -15,10 +15,6 @@
 	clear: both;
 }
 
-.header-img img {
-	margin-top: 70px;
-}
-
 .minimo-main {
 	display: inline-block;
 	float: left;
@@ -28,20 +24,21 @@
 	color: #000000;
 	font-family: 'Inconsolata', monospace;
 	text-transform: uppercase;
-
 }
 
 .header-nav {
 	list-style: none;
 	margin-bottom: 72px;
-	
-	
+	direction: rtl; 
+	/*почему то не меняется порядок элементов*/
 }
+
 .header-nav li {
 	display: inline-block;
 	float: right;
 	margin-left: 95px;
 	font-family: 'Playfair Display', serif;
+
 }
 
 .header-nav li a {
@@ -50,9 +47,14 @@
 	text-transform: uppercase;
 }
 
-.header-img {
-	margin-bottom: 95px;
+div .header-img {
+	margin-top: 70px;
 }
+
+.theme-photo {
+	margin-bottom: 30px;
+}
+
 .theme {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 14px;
@@ -76,6 +78,7 @@ p {
 }
 
 .comment {
+	display: inline-block;
 	text-decoration: none;
 	font-family: 'Ubuntu', sans-serif;
 	color: #b4ad9e;
@@ -84,7 +87,7 @@ p {
 }
 
 .promo {
-	margin-bottom: 135px;
+	margin-bottom: 95px;
 }
 
 .container2 {
@@ -96,30 +99,105 @@ p {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	align-items: center;
 }
 
 .blog-preview li {
 	flex-basis: 420px;
+	margin-bottom: 131px;
 }
 
+main {
+	margin-bottom: 122px;
+}
 .letters {
 	height: 287px;
 	background-color: #f0f0f0;
 
 }
 
-.letters > h2 {
+.letters form {
+	margin: 0 auto;
+}
+form > label {
 	font-family: 'Playfair Display', serif;
 	font-size: 30px;
 	color: #333333;
-	text-align: center;
+	margin-left:  408px;
 	padding-top: 65px;
 }
 
 .email-button {
-	display: inline-block;
-	margin: 0 auto;
-	text-align: center;
-	
+	size: 400px;
+}
 
+.blog-preview-2 {
+	list-style: none;
+}
+
+.blog-preview-2 li img {
+	margin-bottom: 30px;
+}
+
+.blog-left {
+	float: left;
+	margin-top: 100px;
+	width: 420px;
+	
+}
+
+.blog-right {
+	float: right;
+	margin-top: 100px;
+	width: 420px;
+}
+
+.load-more {
+	font-family: 'Playfair Display', serif;
+	color: #818181;
+	font-size: 20px;
+	line-height: 24px;
+	border: 1px solid #626262;
+	padding: 20px 32px;
+	margin: 162px 360px;
+}
+
+ input {
+	margin: 0 auto;
+}
+
+footer {
+	height: 100px;
+	background-color: #f0f0f0;
+}
+
+.political {
+	margin-left: 148px;
+}
+
+.political a {
+	display: inline-block;
+	text-decoration: none;
+	color: #202020;
+	font-family: 'Playfair Display', serif;
+	font-size: 14px;
+	margin-left: 15px;
+	margin-top: 38px;
+}
+
+.political li {
+	display: inline-block;
+}
+
+.socials {
+	float: right;
+	list-style: none;
+	margin-right: 66px;
+	margin-bottom: 44px;
+}
+
+.socials li {
+	display: inline-block;
+	height: 15px;
+	width: 15px;
 }

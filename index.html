@@ -4,17 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="dist/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
   <title>Document</title>
 </head>
 <body>
-  <p>Хуй пизда сковорода МОЙ НАСТАВНИК ДЖИГУРДА</p>
-
-  <article class="pahom">
-  	<p>В лес пошли мы за грибами, мухоморы собирали<br> 
-		
-  	</p>
-  </article>
-
+	<header class="container clearfix">
+	  	<a href="#minimo" class="minimo-main">minimØ</a>
+	  	<nav class="header-nav"> 
+	  		<li><a href="#lifestyle">lifestyle</a></li>
+	  		<li><a href="photodiary">photodiary</a></li>
+	  		<li><a href="music">music</a></li>
+	  		<li><a href="#travel">travel</a></li>
+	  	</nav>
+	</header>	
+	<div class="promo container">
+		<img src="img/first-bg.jpg" alt="two girls" class="header-img ">
+	</div>
+		<div class="promo container2">
+			<h4 class="theme">photodiary</h4>
+		<h2>The perfect weeend getaway</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+		<a href="#forum" class="comment">leave a comment</a>
+	</div>
+	<main class="content container2">
+		<ul class="blog-preview">
+			<li>
+				<img src="img/lifestyle-photo.jpg" class="theme-photo">
+				<h4 class="theme">lifestyle</h4>
+				<h2>more than just a music festival</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+			</li>
+			<li>
+				<img src="img/hot-cup.jpg" class="theme-photo">
+				<h4 class="theme">lifestyle</h4>
+				<h2>life tastes better with coffee</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+			</li>
+			<li>
+				<img src="img/piece.jpg" class="theme-photo">
+				<h4 class="theme">photography</h4>
+				<h2>American dream</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+			</li>
+			<li>
+				<img src="img/hipster.jpg" class="theme-photo">
+				<h4 class="theme">photodiary</h4>
+				<h2>A day exploring the Alps</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+			</li>
+		</ul>
+	</main>
+	<section class="letters">
+		<form action="#server.url" method="get">
+			<h2>
+				<label for="email">Sign up for our newsletter!
+				</label>
+			</h2>
+			<input type="email" name="email" id="email" placeholder="enter a valid email address" class="email-button" size="50">
+		</form>
+	</section>
+	<section class="content-2 container2">
+		<ul class="blog-preview-2">
+			<li class="blog-left">
+				<img src="img/woman-hat.jpg">
+				<h4 class="theme">lifestyle</h4>
+				<h2>Top 10 songs for running</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+			</li>
+			<li class="blog-right">
+				<img src="img/road.jpg">
+				<h4 class="theme">lifestyles</h4>
+				<h2>Cold winter days</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+			</li>
+			<div class="clearfix"></div>
+			<input type="button" value="Load more" class="load-more">
+		</ul>
+	</section>
+	<footer>
+		<ul class="political">
+			<li><a href="#terms">Terms and conditions</a></li>
+			<li><a href="#privacy">Privacy</a></li>
+		</ul>
+		<ul class="socials">
+			<li>Follow</li>
+			<li>
+				<a href="#fb" class="socials socials-fb">
+					<img src="img/fb.png">
+				</a>
+			</li>
+			<li>
+				<a href="#tw" class="socials socials-tw">
+					<img src="img/tw.png">
+				</a>
+			</li>
+			<li>
+				<a href="#inst" class="socials socials-inst">
+					<img src="img/inst.png">
+				</a>
+			</li>
+		</ul>
+	</footer>
 </body>
 </html>
